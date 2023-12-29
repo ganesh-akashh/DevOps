@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  my-app:
+    build: ./my-app
+    image: my_app1
+    container_name: app_c2
+    volumes:
+      - ./my-app:/app
+      - /app/node_modules
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    
